@@ -13,16 +13,13 @@
         <span class="comment-content">{{comment.content}}</span>
       </div>
       <div>
-        <div class="comment-img" v-if="Object.keys(comment.images).length !== 0">
+        <div class="comment-img">
           <img v-for="item in comment.images" :src="item" alt="">
         </div>
         <span class="comment-date">{{comment.created | showDate}}</span>
         <span>{{comment.style}}</span>
       </div>
-
     </div>
-
-
   </div>
 </template>
 

@@ -78,7 +78,6 @@
           this.commentInfo = data.rate.list[0]
         }
       })
-
       //获取详情页的推荐数据
       getRecommend().then(res => {
         // console.log(res.data.list)
@@ -93,8 +92,11 @@
       imgLoad(){
         this.newRefresh()
         //this.$refs.scroll.scrollRefresh()
-        console.log('详细页图片刷新成功！！！！！')
-      }
+        console.log('详细页商品信息图片刷新成功！！！！！')
+      },
+      // titleClick(index){
+      //   console.log(index)
+      // }
     }
   }
 </script>
