@@ -13,8 +13,8 @@
         <span class="comment-content">{{comment.content}}</span>
       </div>
       <div>
-        <div v-if="Object.keys(comment.images).length !== 0" v-for="item in comment.images">
-          <img :src="item" alt="">
+        <div class="comment-img" v-if="Object.keys(comment.images).length !== 0">
+          <img v-for="item in comment.images" :src="item" alt="">
         </div>
         <span class="comment-date">{{comment.created | showDate}}</span>
         <span>{{comment.style}}</span>
@@ -93,5 +93,9 @@
   .comment-content-1 {
     margin-bottom: 5px;
   }
-
+  .comment-img img{
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+  }
 </style>
