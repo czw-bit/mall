@@ -22,7 +22,7 @@
     },
     methods:{
       imgLoad(){
-        this.$bus.$emit('imgRefresh')
+        this.$bus.$emit('Refresh')
       },
       imgDetailClick(){
         //this.$router.push('/detail')
@@ -40,7 +40,6 @@
 <style scoped>
   .goods-item {
     width: 48%
-
   }
   .goods-item img {
     width: 100%;

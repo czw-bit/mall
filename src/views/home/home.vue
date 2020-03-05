@@ -84,7 +84,7 @@
     mounted() {
       //每次创建一张图片就调用一次better-scorll.refresh刷新方法
       const refreshDeounce = debounce(this.$refs.scroll.scrollRefresh,20)
-      this.$bus.$on('imgRefresh', () => {
+      this.$bus.$on('Refresh', () => {
         refreshDeounce()
         console.log('主页面图片刷新成功！！！')
       })
@@ -134,6 +134,8 @@
       //回到最顶部
       backClick() {
         this.$refs.scroll.scrollq.scrollTo(0, 0, 300)
+        
+        console.log('success')
       },
       //自动显示和隐藏 backTab
       backTabControl(position) {
@@ -167,7 +169,6 @@
 
 <style scoped>
   #home {
-
     height: 100vh;
   }
 
