@@ -20,18 +20,23 @@ export default new Vuex.Store({
   },
   actions: {
       productPrice(content, payload){
-        let oldProduct = null;
-        for(let item of content.state.cartList){
-          if(item.iid === payload.iid){
-            oldProduct = item
+        return new Promise((resolve, reject) => {
+          let oldProduct = null;
+          for(let item of content.state.cartList){
+            if(item.iid === payload.iid){
+              oldProduct = item
+            }
           }
-        }
-        if(oldProduct){
-          content.commit('countAdd',oldProduct)
-        }else {
-          payload.count = 1
-          content.commit('pushAdd',payload)
-        }
+          if(oldProduct){
+            content.commit('countAdd',oldProduct)
+            resolve('商品数量加1')
+          }else {
+            payload.count = 1
+            content.commit('pushAdd',payload)
+            resolve('添加了新的商品')
+          }
+        })
+        
       }
   },
   modules: {

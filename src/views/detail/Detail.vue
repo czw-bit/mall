@@ -158,7 +158,9 @@
         product.desc = this.goods.desc
         product.price = this.goods.realPrice
         product.iid = this.iid
-        this.$store.dispatch('productPrice',product)
+        this.$store.dispatch('productPrice',product).then(res => {
+          this.$toast.show(res,1000)
+        })
 
       }
 

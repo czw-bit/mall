@@ -9,7 +9,7 @@
       <div class="result-price">
         合计:{{resultPrice}}
       </div>
-      <div class="result-count">
+      <div @click="shopResult" class="result-count">
         去计算({{resultCount}})
       </div>
     </div>
@@ -50,6 +50,11 @@
           return this.$store.state.cartList.forEach(item => item.checked = false)
         }else {
           return this.$store.state.cartList.forEach(item => item.checked = true)
+        }
+      },
+      shopResult(){
+        if(!this.isShowChecked){
+          this.$toast.show('请选择商品',2000)
         }
       }
     }
