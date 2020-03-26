@@ -155,7 +155,7 @@
       homeLoadImg() {
         //tab-control固定
         this.taboffsetTop = this.$refs.tabControl1.$el.offsetTop
-
+        
       }
 
     },

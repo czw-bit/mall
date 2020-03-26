@@ -1,12 +1,17 @@
 <template>
   <div>
-    <h1>分类页面</h1>
+    <cate-gory-nav-bar/>
   </div>
 </template>
 
 <script>
+
+  import cateGoryNavBar from './chidComps/cateGoryNavBar.vue'
   export default {
-    name:'Category'
+    name:'Category',
+    components:{
+      cateGoryNavBar
+    },
   }
 </script>
 
